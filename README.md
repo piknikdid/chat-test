@@ -3,11 +3,10 @@
 ### Installing
 
 - Clone repo
-- Cd to project
+	- Cd to project
     
         ```cd chat_test/```
-    
-    - Run
+	- Run
     
         ```python manage.py runserver```
 
