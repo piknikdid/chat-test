@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container-fluid">
+  <div class="row">
+    <div class="menu_panel col-md-3" style="padding-right : 0" >
+      <div class="user_info" >
+        <h3>{{user}}</h3>
+        <a href="logout" class="btn btn-default">Log Out</a>
+      </div>
+      <div class="search_panel">
+        <input type="text">
+        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+
+      </div>
+      <div class="friend_panel" >
+
+      </div>
+
+    </div>
+
+  <div class="general_panel col-md-9" style="padding : 0">
+  <div class="chat_name" >general chat</div>
+  <div class="message_box" id="message_box">
+
+    {% for message in messages %}
+
+    <div class="sf_chat_msg_content sf_chat_msg_text_content">
+ <div class="sf_chat_msg_actions sf_hidden"></div>
+  <div class="sf_chat_msg_text">
+      <div class="sf_chat_msg_username">
+        <span>{{message.user}}</span></div>
+      <span class="sf_chat_msg_text_message">
+      {{message.chat_text}}
+      </span>
+      <div class="sf_chat_msg_info">
+          <div class="sf_chat_msg_time">{{message.pub_date}}</div>
+      </div>
+  </div>
+  <div class="sf_chat_msg_form">
+  </div>
+</div>
+
+    {% endfor %}
+
+  </div>
+      <div class="input_box">
+        <form action="" method = 'post'>
+          {% csrf_token %}
+          <div class="input-group">
+      {{ form.chat_text }}
+      <div class="input-group-btn">
+        <button class="btn btn-default" type="submit">
+          GO
+        </button>
+      </div>
+    </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  var myDiv = document.getElementById("message_box");
+  myDiv.scrollTop = myDiv.scrollHeight;
+</script>
+{% endblock content %}

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+      {% load staticfiles %}
+      <link rel="stylesheet" type="text/css" href="{% static 'chat/style.css' %}">
+      {% load bootstrap3 %}
+      {% bootstrap_css %}
+      {% bootstrap_javascript %}
+
+
+</head>
+<body>
+    {% block content %}{% endblock content %}
+    {% block extra_javascript %}{% endblock extra_javascript %}
+</body>
+</html>

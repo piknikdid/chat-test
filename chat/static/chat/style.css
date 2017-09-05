@@ -1,0 +1,84 @@
+.user_info{
+  text-align:center;
+  height: 78px;
+  background: #7f86b0;
+}
+
+.user_info h3{
+  margin: 0;
+  padding-left: 5;
+}
+
+.menu_panel{
+  padding-left: 5;
+}
+
+.search_panel{
+  border :1px solid black;
+}
+
+.friend_panel{
+  border :1px solid black;
+  height:calc(100vh - 150px);
+}
+
+.general_panel{
+  padding: 0;
+}
+
+.chat_name{
+
+  text-align: center;
+  color: white;
+  font-size:44px;
+  background-color: #7a1f1f;
+  height: 78px;
+  position: relative;
+  padding-right: 70px;
+  z-index: 100;
+}
+
+.message_box{
+  overflow: auto;
+  height: calc(100vh - 150px);
+  right: -6px;
+  background: #dbc8c8;
+}
+
+
+.sf_chat_msg_content{
+  font-size: 15px;
+  line-height: 22px;
+  color: #333;
+  margin-bottom:25px;
+  box-sizing: border-box;
+  max-width: calc(100% - 30px);
+}
+
+
+.sf_chat_msg_text{
+  word-wrap: break-word;
+  border: 1px solid #fff;
+  background: #fff;
+  border-radius: 17px;
+  color: #444;
+  padding: 6px 13px 5px;
+  display: inline-block;
+  max-width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+
+.sf_chat_msg_username{
+  font-size: 14px;
+  line-height: 24px;
+  color: #7f80b0
+}
+
+.sf_chat_msg_text_message{
+  font-size: 13px;
+  line-height: 23px;
+  color: #898792;
+}
